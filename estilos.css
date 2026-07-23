@@ -127,3 +127,36 @@ body {
 .btn-principal:hover {
     background-color: #1b5e20;
 }
+/* Tarjeta de cada mod recomendado */
+.tarjeta-mod {
+    background-color: #f9f9f9;
+    border-left: 5px solid #2e7d32;
+    padding: 15px;
+    border-radius: 6px;
+    margin-bottom: 15px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.tarjeta-mod h3 {
+    margin: 0 0 5px 0;
+    color: #2e7d32;
+    font-size: 1.1em;
+}
+
+.tarjeta-mod .version-tag {
+    display: inline-block;
+    background-color: #e0e0e0;
+    color: #555;
+    font-size: 0.75em;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.tarjeta-mod p {
+    margin: 0;
+    font-size: 0.95em;
+    color: #444;
+    text-align: left;
+}

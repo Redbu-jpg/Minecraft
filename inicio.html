@@ -3,21 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Servidor - Inicio</title>
+    <title>Servidor - Recomendaciones de Mods</title>
     <link href="https://googleapis.com" rel="stylesheet">
     <link rel="stylesheet" href="estilos.css">
 </head>
 <body>
 
-    <div class="banner-degradado">¡ACCESO CONCEDIDO!</div>
+    <nav class="menu-navegacion">
+        <a href="inicio.html" class="enlace-menu activo">Recomendar Mod</a>
+        <a href="index.html" class="enlace-menu" style="color: #c62828;">Salir</a>
+    </nav>
 
-    <div class="contenedor">
-        <h1>¡Bienvenido al servidor!</h1>
-        <p>Has iniciado sesión correctamente en tu cuenta.</p>
+    <div class="banner-degradado">MODS RECOMENDADOS</div>
+
+    <div class="contenedor" style="max-width: 600px;">
+        <h1>Recomienda un Mod</h1>
+        <p>Comparte tus modificaciones favoritas con la comunidad.</p>
         
-        <!-- Un botón para poder regresar al login si quieres -->
-        <a href="index.html" class="btn-principal" style="display: inline-block; text-decoration: none; margin-top: 20px; line-height: 20px;">Cerrar Sesión</a>
+        <!-- Formulario de Mods -->
+        <form class="formulario-registro" id="form-mod" style="margin-top: 20px;">
+            <input type="text" id="mod-nombre" placeholder="Nombre del Mod (ej: OptiFine)" required>
+            <input type="text" id="mod-version" placeholder="Versión de Minecraft (ej: 1.20.1)" required>
+            <textarea id="mod-desc" placeholder="¿De qué trata el mod y por qué lo recomiendas?..." style="padding: 12px; border: 1px solid #ccc; border-radius: 8px; font-size: 1em; outline: none; font-family: arial, sans-serif; height: 80px; resize: none;" required></textarea>
+            <button type="submit" class="btn-principal">Publicar Mod</button>
+        </form>
+
+        <!-- Aquí se irán mostrando los mods recomendados -->
+        <div id="lista-mods" style="margin-top: 30px; padding: 0 30px; text-align: left;"></div>
     </div>
 
+    <script src="script.js"></script>
 </body>
 </html>

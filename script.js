@@ -43,3 +43,34 @@ formulario.addEventListener('submit', (e) => {
     window.location.href = "inicio.html"; 
 });
 });
+// ... MANTÉN AQUÍ TODO TU CÓDIGO ANTERIOR DE SCRIPT.JS ...
+
+// LÓGICA NUEVA PARA LA PÁGINA DE MODS (Detecta si estamos en inicio.html)
+const formMod = document.getElementById('form-mod');
+const listaMods = document.getElementById('lista-mods');
+
+if (formMod && listaMods) {
+    formMod.addEventListener('submit', (e) => {
+        e.preventDefault();
+
+        // Capturar los datos del formulario
+        const nombre = document.getElementById('mod-nombre').value;
+        const version = document.getElementById('mod-version').value;
+        const descripcion = document.getElementById('mod-desc').value;
+
+        // Crear la estructura de la tarjeta visual
+        const tarjeta = document.createElement('div');
+        tarjeta.classList.add('tarjeta-mod');
+        tarjeta.innerHTML = `
+            <h3>${nombre}</h3>
+            <span class="version-tag">MC ${version}</span>
+            <p>${descripcion}</p>
+        `;
+
+        // Añadir la tarjeta a la lista (al principio)
+        listaMods.insertBefore(tarjeta, listaMods.firstChild);
+
+        // Limpiar el formulario
+        formMod.reset();
+    });
+}
