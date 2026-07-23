@@ -86,3 +86,6 @@ if (formMod && listaMods) {
         formMod.reset();
     });
 }
+function favorito(nombre) {
+    alert(nombre + " añadido a favoritos ❤️");
+}
