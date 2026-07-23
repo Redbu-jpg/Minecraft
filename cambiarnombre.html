@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cambiar nombre</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+
+<body>
+
+    <nav class="menu-navegacion">
+        <div class="enlaces-centro">
+            <a href="inicio.html" class="enlace-menu">MODS</a>
+            <a href="mapas.html" class="enlace-menu">Mapas</a>
+            <a href="cuenta.html" class="enlace-menu">Cuenta</a>
+        </div>
+
+        <div class="perfil-esquina">
+            <img src="https://gstatic.com" class="foto-perfil">
+        </div>
+    </nav>
+
+    <div class="banner-degradado">
+        CAMBIAR NOMBRE
+    </div>
+
+    <div class="contenedor" style="max-width: 500px;">
+
+        <h1>Nuevo nombre</h1>
+
+        <p>Escribe el nombre que quieres usar:</p>
+
+        <input 
+            id="nuevo-nombre" 
+            type="text" 
+            placeholder="Nuevo nombre"
+            style="width:80%; padding:12px; border-radius:8px; border:1px solid #ccc;"
+        >
+
+        <br><br>
+
+        <button class="btn-principal" onclick="guardarNombre()">
+            Guardar nombre
+        </button>
+
+        <br><br>
+
+        <a href="cuenta.html" class="btn-principal" style="text-decoration:none;">
+            Volver
+        </a>
+
+    </div>
+
+
+<script>
+function guardarNombre() {
+
+    let nombre = document.getElementById("nuevo-nombre").value;
+
+    if (nombre.trim() !== "") {
+
+        localStorage.setItem("nombreUsuario", nombre);
+
+        alert("Nombre cambiado correctamente");
+
+        window.location.href = "cuenta.html";
+
+    } else {
+
+        alert("Escribe un nombre primero");
+
+    }
+}
+</script>
+
+</body>
+</html>
