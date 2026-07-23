@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Página Web</title>
+    <!-- Importamos una fuente pixelada de Google Fonts -->
+    <link href="https://googleapis.com" rel="stylesheet">
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+    <div class="banner-degradado">¡BIENVENIDO!</div>
+
+    <div class="contenedor">
+        <div class="opciones-cuenta">
+            <button type="button" id="btn-login" class="btn-opcion activo">Iniciar Sesión</button>
+            <button type="button" id="btn-registro" class="btn-opcion">Registrarse</button>
+        </div>
+
+        <form class="formulario-registro" id="mi-formulario">
+            <input type="text" id="campo-nombre" placeholder="Nombre completo" style="display: none;">
+            <input type="email" placeholder="Correo electrónico" required>
+            <input type="password" placeholder="Contraseña" required>
+            
+            <!-- Enlace de contraseña olvidada -->
+            <a href="#" class="olvido-pass" id="enlace-olvido">¿Olvidaste tu contraseña?</a>
+            
+            <button type="submit" id="btn-enviar" class="btn-principal">Entrar</button>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
