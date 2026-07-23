@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Servidor - Recomendaciones de Mods</title>
+    <link href="https://googleapis.com" rel="stylesheet">
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+    <!-- Menú de navegación corregido -->
+    <nav class="menu-navegacion">
+        <!-- Enlaces del menú centrados -->
+        <div class="enlaces-centro">
+            <a href="inicio.html" class="enlace-menu">Recomendar Mod</a>
+            <a href="cuenta.html" class="enlace-menu">Cuenta</a>
+            <a href="index.html" class="enlace-menu enlace-salir">Salir</a>
+        </div>
+
+        <!-- Foto de perfil en la esquina derecha -->
+        <div class="perfil-esquina">
+            <img src="https://gstatic.com" alt="Perfil" class="foto-perfil">
+        </div>
+    </nav>
+
+    <!-- Banner principal -->
+    <div class="banner-degradado">MODS RECOMENDADOS</div>
+
+    <!-- Contenedor del formulario -->
+    <div class="contenedor contenedor-formulario">
+        <h1>Recomienda un Mod</h1>
+        <p>Comparte tus modificaciones favoritas con la comunidad.</p>
+        
+        <!-- Formulario de Mods -->
+        <form class="formulario-registro" id="form-mod">
+            <input type="text" id="mod-nombre" placeholder="Nombre del Mod (ej: OptiFine)" required>
+            <input type="text" id="mod-version" placeholder="Versión de Minecraft (ej: 1.20.1)" required>
+            <textarea id="mod-desc" placeholder="¿De qué trata el mod y por qué lo recomiendas?..." required></textarea>
+            <button type="submit" class="btn-principal">Publicar Mod</button>
+        </form>
+
+        <!-- Contenedor dinámico para la lista de mods -->
+        <div id="lista-mods"></div>
+    </div>
